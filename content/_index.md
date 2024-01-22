@@ -76,7 +76,7 @@ sections:
               * Modelling
               * Deploying
         - title: Professor of Semiconductor Physics
-          company: University X
+          company: University La salle University
           company_url: ''
           company_logo: org-x
           location: California
