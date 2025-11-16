@@ -72,7 +72,7 @@ body {
   max-width: 100%;
   width: 100%;
   margin: 0;
-  padding: 4rem 2rem;
+  padding: 5rem 3rem; /* more space between content and edges */
 }
 
 /* Top Navigation */
@@ -135,14 +135,16 @@ body {
 
 .bio-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
+  grid-template-columns: 1fr 1.8fr 1fr; /* larger middle column for biography */
+  grid-auto-rows: 1fr; /* ensure equal-height columns */
+  gap: 3rem; /* more space between columns */
+  align-items: stretch; /* stretch children to full row height */
 }
 
 .bio-col-1 {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .bio-col-2 {
@@ -158,12 +160,13 @@ body {
 
 .headshot-wrapper {
   width: 100%;
-  max-width: 280px;
-  height: auto;
+  max-width: 360px; /* larger headshot */
+  height: 100%;
+  min-height: 300px; /* match panel heights */
   aspect-ratio: 1;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
   background-color: var(--bg-secondary);
 }
 
@@ -175,8 +178,8 @@ body {
 
 .bio-text {
   background-color: var(--bg-secondary);
-  padding: 1.5rem;
-  border-radius: 8px;
+  padding: 2rem; /* more internal spacing */
+  border-radius: 10px;
   border-left: 4px solid var(--accent);
   height: 100%;
   display: flex;
@@ -199,9 +202,10 @@ body {
 
 .right-section {
   background-color: var(--bg-secondary);
-  padding: 1.5rem;
+  padding: 1.75rem;
   border-radius: 8px;
   border-left: 4px solid var(--accent);
+  height: 100%; /* stretch to match biography panel */
 }
 
 .right-section h2 {
