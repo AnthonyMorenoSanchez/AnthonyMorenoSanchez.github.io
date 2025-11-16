@@ -1,0 +1,121 @@
+/* Projects Page Specific Styles */
+
+.projects-section {
+  margin-bottom: 4rem;
+}
+
+.projects-table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  background-color: var(--bg-secondary);
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text);
+}
+
+.projects-table thead {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+.projects-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.projects-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.projects-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.projects-table tbody tr:hover {
+  background-color: var(--bg);
+}
+
+.projects-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.project-name {
+  color: var(--accent);
+  font-weight: 600;
+  min-width: 200px;
+}
+
+.project-description {
+  min-width: 250px;
+}
+
+.project-usecase {
+  min-width: 200px;
+}
+
+.project-libraries {
+  min-width: 180px;
+}
+
+.project-date {
+  min-width: 120px;
+  text-align: center;
+}
+
+/* Back Link */
+.back-link-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.back-link:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .projects-table-wrapper {
+    padding: 0.5rem;
+  }
+
+  .projects-table th,
+  .projects-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .projects-table th {
+    font-size: 0.8rem;
+  }
+
+  .project-name,
+  .project-description,
+  .project-usecase,
+  .project-libraries,
+  .project-date {
+    min-width: 100px;
+  }
+}

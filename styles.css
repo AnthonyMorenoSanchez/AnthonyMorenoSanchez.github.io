@@ -69,8 +69,9 @@ body {
 
 /* Main Container */
 .container {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
   padding: 4rem 2rem;
 }
 
@@ -124,7 +125,7 @@ body {
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
-/* Bio Section with Headshot - 2 Column Layout */
+/* Bio Section with Headshot - 3 Column Full Width Layout */
 .bio-section {
   border-left: none;
   background-color: transparent;
@@ -134,20 +135,30 @@ body {
 
 .bio-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
   align-items: start;
 }
 
-.bio-left {
+.bio-col-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.bio-col-2 {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+}
+
+.bio-col-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .headshot-wrapper {
   width: 100%;
-  max-width: 300px;
+  max-width: 280px;
   height: auto;
   aspect-ratio: 1;
   border-radius: 12px;
@@ -167,6 +178,9 @@ body {
   padding: 1.5rem;
   border-radius: 8px;
   border-left: 4px solid var(--accent);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .bio-text h2 {
@@ -180,12 +194,7 @@ body {
   color: var(--text-secondary);
   line-height: 1.7;
   margin: 0;
-}
-
-.bio-right {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  flex: 1;
 }
 
 .right-section {
@@ -202,11 +211,13 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Inline Skills Display */
+/* Inline Skills Display - Single Row */
 .skills-inline {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
 }
 
 .skill-tag {
@@ -217,6 +228,8 @@ body {
   font-size: 0.95rem;
   font-weight: 500;
   display: inline-block;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Education List */
@@ -440,11 +453,9 @@ body {
     gap: 1.5rem;
   }
 
-  .bio-left {
-    gap: 1rem;
-  }
-
-  .bio-right {
+  .bio-col-1,
+  .bio-col-2,
+  .bio-col-3 {
     gap: 1rem;
   }
 
@@ -463,10 +474,13 @@ body {
 
   .skills-inline {
     gap: 0.5rem;
+    flex-wrap: wrap;
+    overflow-x: visible;
   }
 
   .skill-tag {
     padding: 0.4rem 0.8rem;
     font-size: 0.85rem;
+    flex-shrink: 1;
   }
 }
