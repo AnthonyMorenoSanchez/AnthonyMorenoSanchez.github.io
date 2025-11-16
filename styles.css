@@ -124,7 +124,7 @@ body {
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
-/* Bio Section with Headshot */
+/* Bio Section with Headshot - 2 Column Layout */
 .bio-section {
   border-left: none;
   background-color: transparent;
@@ -133,15 +133,23 @@ body {
 }
 
 .bio-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
-  align-items: flex-start;
+  align-items: start;
+}
+
+.bio-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .headshot-wrapper {
-  flex-shrink: 0;
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 1;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -155,13 +163,15 @@ body {
 }
 
 .bio-text {
-  flex: 1;
-  padding: 1rem;
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
 }
 
 .bio-text h2 {
   margin-top: 0;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: var(--accent);
   margin-bottom: 1rem;
 }
@@ -169,6 +179,68 @@ body {
 .bio-text p {
   color: var(--text-secondary);
   line-height: 1.7;
+  margin: 0;
+}
+
+.bio-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.right-section {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+}
+
+.right-section h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+/* Inline Skills Display */
+.skills-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-tag {
+  background-color: var(--accent);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Education List */
+.education-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.education-list li:last-child {
+  border-bottom: none;
+}
+
+.education-list li strong {
+  color: var(--text);
+  font-weight: 500;
 }
 
 /* Publications and Presentations Lists */
@@ -364,17 +436,37 @@ body {
 
   /* Bio Container - Stack on mobile */
   .bio-container {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .headshot-wrapper {
-    width: 200px;
-    height: 200px;
+  .bio-left {
+    gap: 1rem;
   }
 
-  .bio-text {
-    text-align: center;
+  .bio-right {
+    gap: 1rem;
+  }
+
+  .headshot-wrapper {
+    max-width: 200px;
+  }
+
+  .bio-text,
+  .right-section {
+    padding: 1rem;
+  }
+
+  .right-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .skills-inline {
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
   }
 }
