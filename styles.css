@@ -73,7 +73,7 @@ body {
   max-width: 100%;
   width: 100%;
   margin: 0;
-  padding: 5rem 3rem; /* more space between content and edges */
+  padding: 5rem 4rem; /* increased horizontal padding for wider side margins */
 }
 
 /* Top Navigation */
@@ -127,12 +127,12 @@ body {
 }
 
 .university-logo-large {
-  width: 6em; /* Match base university logo size */
+  width: 12em; /* Match base university logo size */
   height: auto;
 }
 
 .education-list li:first-child .university-logo-large {
-  width: 6em; /* Keep La Salle smaller, matching Drexel */
+  width: 12em; /* Keep La Salle smaller, matching Drexel */
 }
 
 .univ-link {
@@ -277,7 +277,7 @@ body {
   padding: 1rem 0;
   color: var(--text-secondary);
   border-bottom: 1px solid var(--border);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 
 .education-list li:last-child {
