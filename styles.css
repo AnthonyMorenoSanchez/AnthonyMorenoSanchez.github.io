@@ -277,7 +277,7 @@ body {
   padding: 1rem 0;
   color: var(--text-secondary);
   border-bottom: 1px solid var(--border);
-  font-size: 1.25rem;
+  font-size: 2.25rem;
 }
 
 .education-list li:last-child {
