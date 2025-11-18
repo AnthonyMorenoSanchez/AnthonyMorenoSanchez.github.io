@@ -57,6 +57,17 @@
   min-width: 200px;
 }
 
+.project-name a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-name a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
 .project-description {
   min-width: 250px;
 }
