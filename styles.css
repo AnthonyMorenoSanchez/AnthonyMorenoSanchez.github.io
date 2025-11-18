@@ -127,8 +127,12 @@ body {
 }
 
 .university-logo-large {
-  width: 24em; /* 4x larger from 6em */
+  width: 6em; /* Match base university logo size */
   height: auto;
+}
+
+.education-list li:first-child .university-logo-large {
+  width: 6em; /* Keep La Salle smaller, matching Drexel */
 }
 
 .univ-link {
@@ -234,7 +238,7 @@ body {
 
 .right-section h2 {
   margin-top: 0;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: var(--accent);
   margin-bottom: 1rem;
 }
@@ -270,9 +274,10 @@ body {
 .education-list li {
   display: flex;
   align-items: center;
-  padding: 0.75rem 0;
+  padding: 1rem 0;
   color: var(--text-secondary);
   border-bottom: 1px solid var(--border);
+  font-size: 1.1rem;
 }
 
 .education-list li:last-child {
@@ -295,11 +300,12 @@ body {
 .publication-item,
 .presentation-item {
   margin-bottom: 1.5rem;
-  padding: 1rem;
+  padding: 1.25rem;
   background-color: var(--bg);
   border-radius: 6px;
   border: 1px solid var(--border);
   transition: background-color 0.2s ease, border-color 0.2s ease;
+  font-size: 1rem;
 }
 
 .publication-item:hover,
@@ -314,14 +320,15 @@ body {
   font-weight: 600;
   color: var(--accent);
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .publication-details,
 .presentation-details {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   margin: 0.5rem 0;
+  line-height: 1.5;
 }
 
 /* Research section */
