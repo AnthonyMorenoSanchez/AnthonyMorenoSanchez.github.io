@@ -208,7 +208,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  font-size: 18px;
+  font-size: 40px;
 }
 
 .bio-text h2 {
